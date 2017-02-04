@@ -16,3 +16,7 @@ The scraping of rank is done using the nokogiri gem and as a background job (rea
 Part 3:
 Build an admin panel for to manage the application & users using the ActiveAdmin gem.
 
+
+
+
+# RAILS_ENV=development bin/delayed_job start forstarting background jobs
