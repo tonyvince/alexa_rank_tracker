@@ -36,6 +36,9 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
+    alexa (0.6.3)
+      faraday (~> 0.8)
+      multi_xml (>= 0.5.0)
     arel (6.0.3)
     autoprefixer-rails (6.7.2)
       execjs
@@ -73,6 +76,8 @@ GEM
       zxcvbn-js (~> 4.2.0)
     erubis (2.7.0)
     execjs (2.7.0)
+    faraday (0.11.0)
+      multipart-post (>= 1.2, < 3)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
     i18n (0.7.0)
@@ -97,6 +102,8 @@ GEM
     mini_portile2 (2.1.0)
     minitest (5.9.1)
     multi_json (1.12.1)
+    multi_xml (0.6.0)
+    multipart-post (2.0.0)
     nokogiri (1.6.8.1)
       mini_portile2 (~> 2.1.0)
     orm_adapter (0.5.0)
@@ -177,6 +184,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  alexa
   bootstrap-sass (= 3.3.6)
   byebug
   coffee-rails (~> 4.1.0)
