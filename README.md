@@ -2,18 +2,17 @@ We want to build a Ruby on Rails application that lets users keep track their we
 
 Part 1:
 
-A user should be able to register and login to our application (using the devise gem : https://github.com/plataformatec/devise).
-On the dashboard the user would have an option to enter the domain (limit of 3), and our application would scrape the rank from the alexa website. (eg: http://alexa.com/siteinfo/redpanthers.co).
-The rank should be displayed in our dashboard.
+A user can register and login to the application (using the devise gem : https://github.com/plataformatec/devise).
+On the dashboard the user would have an option to enter the domain (limit of 3), and the application scrapes the rank from the alexa website. (eg: http://alexa.com/siteinfo/redpanthers.co).
+The rank is displayed in dashboard.
 
 Part 2:
 
-At 12 PM (UTC), our system would check its rank in the alexa website again. 
-Then build a graph for the website with change in rank. 
-The graph should be build using Highcharts.
-The scraping of rank should be done using the nokogiri gem and as a background job (read about ActionJob & sucker_punch).
+At 12 PM (UTC), system checks its rank in the alexa website again. 
+Then build a graph for the website with changes in rank. 
+The graph is build using Highcharts.
+The scraping of rank is done using the nokogiri gem and as a background job (read about ActionJob & sucker_punch).
 
 Part 3:
-Build an admin panel for us to manage this application and users using the ActiveAdmin gem.
+Build an admin panel for to manage the application & users using the ActiveAdmin gem.
 
-// All the code should be managed using github and bonus points for writing test using RSpec or MiniTest
