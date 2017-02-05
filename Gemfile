@@ -13,6 +13,7 @@ gem 'devise'
 gem 'devise_zxcvbn'
 # delayed_job for devise email sending in the background
 gem 'delayed_job_active_record'
+gem 'delayed_job_recurring'
 # daemons to start/stop/restart ruby scripts
 gem "daemons"
 # Use bootstrap as front end framework

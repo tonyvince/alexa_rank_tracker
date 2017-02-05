@@ -19,4 +19,5 @@ Build an admin panel for to manage the application & users using the ActiveAdmin
 
 
 
-# RAILS_ENV=development bin/delayed_job start forstarting background jobs
+ `RAILS_ENV=development bin/delayed_job start forstarting background jobs`
+ `$ rake recurring:init`
