@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'alexa_ranks/new'
+  post 'alexa_ranks/get_rank'
 
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.

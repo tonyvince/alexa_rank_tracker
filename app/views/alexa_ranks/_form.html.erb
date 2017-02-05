@@ -1,2 +1,10 @@
-<h1>AlexaRanks#new</h1>
-<p>Find me in app/views/alexa_ranks/new.html.erb</p>
+<%= form_for(:alexa_rank, remote: true, url: "alexa_ranks/get_rank", html: {id: "new_link", class: "new_link"}) do |f| %>
+  <div>&nbsp</div>
+  <div class="field">
+    <%= f.text_field :given_url, class: "form-control", placeholder: "Enter / Paste a URL" %>
+  </div>
+  <div>&nbsp</div>
+  <div class="actions">
+    <%= f.submit 'Get Rank', :class => "btn btn-primary"%>
+  </div>
+<% end %>

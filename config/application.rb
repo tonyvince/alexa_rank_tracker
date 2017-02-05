@@ -24,5 +24,6 @@ module Workspace
     config.active_record.raise_in_transactional_callbacks = true
     # delayed_job for background processing
     config.active_job.queue_adapter = :delayed_job
+    config.autoload_paths += %W(#{config.root}/lib)
   end
 end

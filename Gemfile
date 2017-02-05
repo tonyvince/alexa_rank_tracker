@@ -23,8 +23,6 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
-# Alexa Web Information Service
-gem 'alexa'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
@@ -32,6 +30,7 @@ gem 'alexa'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+gem 'jquery-validation-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 # jQuery plugin for drop-in fix binded events problem caused by Turbolinks
