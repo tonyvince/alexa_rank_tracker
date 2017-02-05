@@ -6,7 +6,10 @@ module Recurring
     timezone 'UTC'
     queue 'slow-jobs'
     def perform
-      puts "hello"
+      url = "http://alexa.com/siteinfo/example.com"
+      doc = Nokogiri::HTML(open(url))
+      File.open("alexa.HTML", 'a+') {|f| f.write(doc) }
+      @rank = doc.at_css("strong.metrics-data.align-vmiddle").text
     end
   end
 end
