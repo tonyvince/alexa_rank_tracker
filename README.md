@@ -26,9 +26,10 @@ $ cd alexa_rank_tracker
 $ bundle
 $ rake db:migrate
 $ rake db:seed
+$ rails s
 $ RAILS_ENV=development bin/delayed_job start forstarting background jobs
 $ rake recurring:init
-$ rails s
+
 
 ```
 
