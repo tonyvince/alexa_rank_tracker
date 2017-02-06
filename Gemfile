@@ -32,6 +32,7 @@ gem 'coffee-rails', '~> 4.1.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 gem 'jquery-validation-rails'
+gem 'jquery-ui-rails', '~> 5.0.5'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 # jQuery plugin for drop-in fix binded events problem caused by Turbolinks
@@ -43,7 +44,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
+gem 'activeadmin', '~> 1.0.0.pre4'
 # Use Unicorn as the app server
 # gem 'unicorn'
 

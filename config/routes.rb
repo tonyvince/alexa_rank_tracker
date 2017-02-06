@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   post 'alexa_ranks/get_rank'
 
   devise_for :users
