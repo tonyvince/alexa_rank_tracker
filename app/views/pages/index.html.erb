@@ -5,7 +5,8 @@
       <% if user_signed_in? %>
         <% if @rank %>
           <h3>Latest rank of <i>example.com</i> : <%= @rank %></h3>
-          <%#= javascript_include_tag "https://alexa.netshahr.com/en/dailyrank/example.com/script?tc=333333&bg=FFFFFF&brc=333333&brw=1&ce=1"%>
+          <%= high_chart_globals(@chart_globals) %>
+          <%= high_chart("rank_graph", @chart) %>
         <% end %>
         <%= render 'alexa_ranks/form' %>
         <div class="result"></div>

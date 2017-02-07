@@ -21,6 +21,12 @@
 //= require turbolinks
 //= require_tree .
 
+//= require highcharts/highstock
+//= require highcharts/highcharts
+//= require highcharts/highcharts-more
+//= require highcharts/modules/exporting
+
+
 
 $.validator.addMethod(
         "regex",

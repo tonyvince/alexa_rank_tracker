@@ -37,6 +37,8 @@ gem 'jquery-ui-rails', '~> 5.0.5'
 gem 'turbolinks'
 # jQuery plugin for drop-in fix binded events problem caused by Turbolinks
 gem 'jquery-turbolinks'
+# Highcharts for graphs
+gem 'lazy_high_charts'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
