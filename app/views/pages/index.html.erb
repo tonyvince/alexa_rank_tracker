@@ -5,6 +5,8 @@
       <% if user_signed_in? %>
         <% if @rank %>
           <h3>Latest rank of <i>example.com</i> : <%= @rank %></h3>
+          <%= high_chart_globals(@chart_globals) %>
+          <%= high_chart("rank_graph", @chart) %>
         <% end %>
         <%= render 'alexa_ranks/form' %>
         <div class="result"></div>
