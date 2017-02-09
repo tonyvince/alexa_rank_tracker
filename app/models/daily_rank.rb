@@ -32,7 +32,7 @@ class DailyRank < ActiveRecord::Base
       ]
       
       f.xAxis [
-        {title: {text: "Date", margin: 10}, categories: x_axis_data}
+        {title: {text: "Domain", margin: 10}, categories: x_axis_data}
       ]
       f.exporting(width: 800)
       f.legend(align: 'right', verticalAlign: 'top', y: 75, x: -50, layout: 'vertical')
