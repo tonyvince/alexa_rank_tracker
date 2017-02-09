@@ -4,11 +4,14 @@
     <div class="container">
       <% if user_signed_in? %>
         <% if @rank %>
-          <h3>Latest rank of <i>example.com</i> : <%= @rank %></h3>
-          <%= high_chart_globals(@chart_globals) %>
-          <%= high_chart("rank_graph", @chart) %>
+          <% unless @rank_history.empty?%>
+            <%= high_chart_globals(@chart_globals) %>
+            <%= high_chart("rank_graph", @chart) %>            
+          <% end %>
         <% end %>
-        <%= render 'alexa_ranks/form' %>
+        <% unless quota_reached? %>
+          <%= render 'alexa_ranks/form' %>
+        <% end %>
         <div class="result"></div>
       <% else %>
         <h2>Register to get started.</h2>

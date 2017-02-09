@@ -1,28 +1,40 @@
 class DailyRank < ActiveRecord::Base
+  belongs_to :user
+  validate :user_quota, on: :create
+  
+  def user_quota
+    errors.add(:base, 'OOps!!! You have Exceeded maximum domain limit/user (3)')  if self.user.daily_ranks(:reload).count >= 3
+  end
+  
   def self.get_graph_data(daily_ranks)
-    dates = []
+    domains = []
     ranks = []
     daily_ranks.each do |rank|
-      dates.push(rank.created_at.strftime("%Y-%m-%d"))
-      ranks.push(rank.rank.gsub(/,/, '').to_i)
+      domains.push(get_host_without_www rank.domain)
+      ranks.push(rank.rank.gsub(/[\s+,]/, '').to_i)
     end
-    return dates, ranks
+    return domains, ranks
+  end
+  
+  def self.get_host_without_www(url)
+    url = "http://#{url}" if URI.parse(url).scheme.nil?
+    host = URI.parse(url).host.downcase
+    host.start_with?('www.') ? host[4..-1] : host
   end
   
   def self.get_graph(x_axis_data, y_axis_data)
     LazyHighCharts::HighChart.new('graph') do |f|
-      f.title(text: "Alexa rank of <i>example.com</i> for last 10 days")
+      f.title(text: "Alexa rank of your websites")
 
       f.series(name: "Alexa Rank", data: y_axis_data, type: 'line')
-    
       f.yAxis [
-        {title: {text: "Rank in thousands", margin: 30} },
+        {title: {text: "Website Rank", margin: 30}, reversed: true },
       ]
       
       f.xAxis [
         {title: {text: "Date", margin: 10}, categories: x_axis_data}
       ]
-    
+      f.exporting(width: 800)
       f.legend(align: 'right', verticalAlign: 'top', y: 75, x: -50, layout: 'vertical')
       f.chart({defaultSeriesType: "column"})
     end
