@@ -2,12 +2,7 @@ class DomainsController < ApplicationController
   include Alexa
   
   def index
-    @rank = DailyRank.last.try(:rank)
-    @rank_history = DailyRank.where(user_id: current_user.try(:id)).order(:date)
     @domain = current_user.domains.build
-    x_axis_data, y_axis_data = DailyRank.get_graph_data(@rank_history)
-    @chart = DailyRank.get_graph(x_axis_data, y_axis_data)
-    @chart_globals = DailyRank.get_global_graph
   end
   
   def new
@@ -20,19 +15,28 @@ class DomainsController < ApplicationController
     @domain = current_user.domains.build(domain_params)
     @rank = @domain.ranks.build(rank: @domain_rank, date: today)
     respond_to do |format|
-      if @domain.save
-        @rank.save
-        format.html { redirect_to user_domain_path(user_id: @domain.user_id, id: @domain.id), notice: "Saved" }
-        format.json { render :show, status: :created, location: @domain }
+      if @domain_rank != nil && @domain_rank != "-"
+        if @domain.save
+          @rank.save
+          format.html { redirect_to user_domain_path(user_id: @domain.user_id, id: @domain.id), notice: "Domain saved successfully" }
+          format.json { render :show, status: :created, location: @domain }
+        else
+          format.html { render :index }
+          format.json { render json: @domain.errors, status: :unprocessable_entity }
+        end        
       else
-        format.html { render :index }
-        format.json { render json: @domain.errors, status: :unprocessable_entity }
+        format.html { redirect_to root_path, notice: "No rank found for #{@url}" }
+        format.json { render json: {'status': 'unprocessable_entity'} }
       end
     end
   end
   
   def show
-    @domains = current_user.domains
+    @domain_data = User.includes(domains: [:ranks]).find(current_user.id)
+    @my_hash = {
+        name: 'Tokyo',
+        data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
+        }
   end
   
   private

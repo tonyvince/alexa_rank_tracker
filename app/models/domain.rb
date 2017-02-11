@@ -1,6 +1,6 @@
 class Domain < ActiveRecord::Base
   belongs_to :user
-  has_many :ranks
+  has_many :ranks, dependent: :destroy
   validates_uniqueness_of :name, scope: :user_id, message: "You alredy entered that domain"
   validate :user_quota, on: :create
   

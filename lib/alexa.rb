@@ -7,6 +7,6 @@ module Alexa
     alexaValue = nil
     url = "http://alexa.com/siteinfo/" + @url
     doc = Nokogiri::HTML(open(url))
-    alexaValue = doc.at_css("strong.metrics-data.align-vmiddle").text.gsub(/\s+/,'')
+    alexaValue = doc.at_css("strong.metrics-data.align-vmiddle") ?  doc.at_css("strong.metrics-data.align-vmiddle").text.gsub(/\s+/,'') : nil
   end
 end

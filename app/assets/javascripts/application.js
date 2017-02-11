@@ -37,16 +37,16 @@ $.validator.addMethod(
         "Please enter a valid URL (using http)"
 );
 
-$('#new_link').ready(function() {
-  var password_validator = $('#new_link').validate({
+$('#new_domain').ready(function() {
+  var password_validator = $('#new_domain').validate({
     rules: {
-      'alexa_rank[given_url]': {
+      'domain[name]': {
         required: true,
         regex: "^(http|https):\/\/[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}"
       },
     },
     messages: {
-      'alexa_rank[given_url]': {
+      'domain[name]': {
         required: 'Please put in a URL',
       }
     }

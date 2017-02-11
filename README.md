@@ -41,7 +41,7 @@ ENV['PASSWORD'] # db password
 ENV['EMAIL_ID'] # email for devise mails
 ENV['EMAIL_PASSWORD'] # password 
 ```
-
+If graphs are not showing up run `$rake highcharts:update`
 
 ## Built With
 

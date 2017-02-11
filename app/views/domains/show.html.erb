@@ -1,1 +1,73 @@
-<p>Hellllllllllllllllllllllllllllllllloooooooooooooooooooooooooooooooo</p>
+<div class="container">
+
+  <table class="table table-inverse">
+    <thead>
+      <tr>
+        <th>Domain</th>
+        <th>Rank</th>
+        <th>Last Updated</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @domain_data.domains.each do |domain| %>
+        <tr>
+          <td scope="row"><b><i><%= domain.name %></i></b></td>
+          <td><b><%= domain.ranks.last.rank %></b></td>
+          <td><b><%= domain.ranks.last.date %></b></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <div id="rank_graph"></div>
+</div>
+
+
+
+<script>
+  $(function(){
+    var grph_var = Highcharts.chart('rank_graph', {
+        title: {
+            text: 'Alexa Ranks Comparison',
+            x: -20 //center
+        },
+        subtitle: {
+            text: 'Source: Alexa.com',
+            x: -20
+        },
+        xAxis: {
+            categories: <%= raw get_categories %>,
+            title: {
+            text: 'Dates'
+          }
+        },
+        yAxis: {
+            title: {
+                text: 'Alexa Rank',
+                reversed: true,
+            },
+            plotLines: [{
+                value: 0,
+                width: 1,
+                color: '#808080'
+            }]
+        },
+        tooltip: {
+            valuePrefix: 'Rank:',
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle',
+            borderWidth: 0
+        },
+        series: [
+          <% @domain_data.domains.each do |domain| %>
+            { 
+              name: "<%= domain.name %>",
+              data: <%= (domain.ranks.limit(10)).map { |ranks| ranks.rank.gsub(/,/,'').to_i}.inspect %>
+            },
+          <% end %>
+        ]
+    });    
+  });
+</script>

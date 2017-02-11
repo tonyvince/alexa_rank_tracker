@@ -48,8 +48,8 @@
       </div>
     <% end %>
   </div>
-  <%= yield :top_content %>
   <div class="container">
+    <%= yield :top_content %>
     <h1><%= yield :header %></h1>
     <%= yield %>
     <%= render 'layouts/footer' %>

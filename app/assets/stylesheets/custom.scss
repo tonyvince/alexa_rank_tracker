@@ -105,3 +105,24 @@ footer {
     }
   }
 }
+$table-inverse-bg:              $gray-dark !default;
+$table-inverse-color:           $body-bg !default;
+$table-inverse-border-color:    lighten($table-inverse-bg, 15%) !default;
+
+$table-bg-accent:               rgba($gray-light,.075) !default;
+$table-bg-hover:                rgba($gray-light,.075) !default;
+
+.table-inverse {
+  color: $table-inverse-color;
+  background-color: $table-inverse-bg;
+
+  th,
+  td,
+  thead th {
+    border-color: $table-inverse-border-color;
+  }
+
+  &.table-bordered {
+    border: 0;
+  }
+}
