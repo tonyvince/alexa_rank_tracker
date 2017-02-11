@@ -1,7 +1,7 @@
 module DomainsHelper
   
   def get_categories
-    (10.days.ago.to_date..Date.today).map { |date| date.strftime("%Y-%m-%d")}
+    Rank.select(:date).distinct.order(date: :desc).limit(10).reverse.map{|rank| rank.date.strftime("%Y-%m-%d")}
   end
   
 end
