@@ -1,0 +1,12 @@
+<% content_for :top_content do %>
+  <div class="center jumbotron">
+    <h1>Welcome to AlexaRank!</h1>
+    <div class="container">
+        <% unless quota_reached? %>
+          <div>&nbsp</div>
+          <%= render 'domains/form' %>
+        <% end %>
+        <div class="result"></div>
+    </div>
+  </div>
+<% end %>

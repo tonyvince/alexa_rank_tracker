@@ -9,8 +9,10 @@
             <%= high_chart("rank_graph", @chart) %>            
           <% end %>
         <% end %>
+        
         <% unless quota_reached? %>
-          <%= render 'alexa_ranks/form' %>
+          <div>&nbsp</div>
+          <%= render 'domains/form' %>
         <% end %>
         <div class="result"></div>
       <% else %>

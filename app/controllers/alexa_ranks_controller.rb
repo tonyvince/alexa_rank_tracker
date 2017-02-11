@@ -4,6 +4,8 @@ class AlexaRanksController < ApplicationController
     @url = params[:alexa_rank][:given_url]
     @rank =  get_alexa_rank
     @daily_rank = DailyRank.new(rank: @rank, domain: @url, user_id: current_user.id, date: today)
+    @domain = current_user.domains.create(name: @url)
+    @domain.ranks.create(rank: @rank, date: today)
     respond_to do |format|
       if !@rank.nil? && @rank != "-"
         if @daily_rank.save

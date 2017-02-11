@@ -1,0 +1,20 @@
+<%= form_for(@domain, url: user_domains_path(@domain.user_id)) do |f| %>
+  <% if @domain.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@domain.errors.count, "error") %> prohibited this domain from being saved:</h2>
+      <ul>
+      <% @domain.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <div class="field">
+    <%= f.text_field :name, class: "form-control", placeholder: "Enter / Paste a URL" %>
+  </div>
+  <div>&nbsp</div>
+  <div class="actions">
+    <%= f.submit 'Get Rank', :class => "btn btn-info"%>
+  </div>
+<% end %>
