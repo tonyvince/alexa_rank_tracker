@@ -42,7 +42,7 @@
             x: -20
         },
         xAxis: {
-            categories: <%= raw get_categories %>,
+            type: "category",
             title: {
             text: 'Dates'
           }
@@ -71,7 +71,7 @@
           <% @domain_data.domains.each do |domain| %>
             { 
               name: "<%= domain.name.sub(/^https?\:\/\//, '') %>",
-              data: <%= (domain.ranks.limit(10)).map { |ranks| ranks.rank.gsub(/,/,'').to_i}.inspect %>
+              data: <%= raw (domain.ranks.limit(10)).map { |rank| [rank.date.strftime('%Y-%m-%d'), rank.rank.gsub(/,/,'').to_i]}.inspect %>
             },
           <% end %>
         ]

@@ -8,12 +8,16 @@ module Recurring
     timezone 'UTC'
     def perform
       base_url = "http://alexa.com/siteinfo/"
-      websites = DailyRank.select(:domain).distinct
-      websites.each do |website|
+      #websites = DailyRank.select(:domain).distinct
+      domains = Domain.includes(:ranks)
+      domains.each do |domain|
         url = website.try(:domain)
-        doc = Nokogiri::HTML(open(base_url + url))
-        @rank = doc.at_css("strong.metrics-data.align-vmiddle").text.gsub(/\s+/,'')
-        DailyRank.where(domain: url).update_all(rank: @rank)
+        if domain.ranks.last.date != Date.today
+          doc = Nokogiri::HTML(open(base_url + url))
+          new_rank = doc.at_css("strong.metrics-data.align-vmiddle").text.gsub(/\s+/,'')
+          @rank = Rank.new(rank: new_rank, date: Date.today, domain_id: domain.id)
+          @rank.save
+        end
       end
     end
   end
