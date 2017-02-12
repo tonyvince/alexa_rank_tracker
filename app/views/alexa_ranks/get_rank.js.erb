@@ -1,9 +1,0 @@
-
-<% if @daily_rank.errors.any? %>
-  <% @daily_rank.errors.full_messages.each do |msg| %>
-    $('.result').append('<p><%= msg %></p><%= link_to "Compare Ranks", root_path, class: "btn btn-success"%>')
-  <% end %>
-<% else %>
-  $('.result').append('<p class="short_url">Website Rank of <%= @url %>: <%= @rank %></p>')
-<% end %>
-
