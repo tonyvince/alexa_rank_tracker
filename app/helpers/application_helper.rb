@@ -4,6 +4,6 @@ module ApplicationHelper
   end
   
   def quota_reached?
-    current_user.daily_ranks.count >= 3
+    current_user.domains.count >= 3
   end
 end

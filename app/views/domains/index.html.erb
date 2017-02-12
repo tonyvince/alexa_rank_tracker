@@ -2,9 +2,11 @@
   <div class="center jumbotron">
     <h1>Welcome to AlexaRank!</h1>
     <div class="container">
-        <% unless quota_reached? %>
+        <% if !quota_reached? %>
           <div>&nbsp</div>
           <%= render 'domains/form' %>
+        <% else %>
+          <%= link_to "See your Domains", user_domain_path(user_id: current_user.id, id: current_user.domains.first.id), class: "btn btn-primary" %>
         <% end %>
         <div class="result"></div>
     </div>
