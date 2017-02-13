@@ -3,6 +3,7 @@ Ruby on Rails application that lets users keep track their website's [Alexa](htt
 <p align="center">
 <a href="https://raw.githubusercontent.com/tonyvince/alexa_rank_tracker/master/LICENSE"><img src="http://img.shields.io/badge/license-MIT-blue.svg?style=flat" alt="License: MIT" /></a>
 </p>
+[![Dependency Status](https://www.versioneye.com/user/projects/58a13a3e0f3d4f003ce97ed3/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/58a13a3e0f3d4f003ce97ed3)
 Made with ❤️ by <a href="mailto:tonyvince7@gmail.com">Tony Vincent</a>.
 
 ## Getting Started
