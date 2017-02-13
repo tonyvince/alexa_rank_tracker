@@ -1,13 +1,17 @@
 # Alexa Rank Tracker
 <p align="center">
   <img src="https://raw.githubusercontent.com/tonyvince/alexa_rank_tracker/master/public/logo.png", alt="logo"/>
-  Ruby on Rails application that allows users to keep track their website's [Alexa](http://www.alexa.com/siteinfo) Rank.
 </p>
 
+<p align="center">Ruby on Rails application that allows users to keep track their website's [Alexa](http://www.alexa.com/siteinfo) Rank.</p>
+
+<p align="center">
 [![Build Status](https://travis-ci.org/tonyvince/alexa_rank_tracker.svg?branch=master)](https://travis-ci.org/tonyvince/alexa_rank_tracker)
 [![Code Climate](https://codeclimate.com/github/tonyvince/alexa_rank_tracker/badges/gpa.svg)](https://codeclimate.com/github/tonyvince/alexa_rank_tracker)
 [![Dependency Status](https://www.versioneye.com/user/projects/58a13a3e0f3d4f003ce97ed3/badge.svg)](https://www.versioneye.com/user/projects/58a13a3e0f3d4f003ce97ed3)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://raw.githubusercontent.com/tonyvince/alexa_rank_tracker/master/LICENSE)
+</p>
+
 
 <p align="center">
 Made with ❤️ by <a href="mailto:tonyvince7@gmail.com">Tony Vincent</a>.
