@@ -3,6 +3,7 @@ Ruby on Rails application that lets users keep track their website's [Alexa](htt
 
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](https://raw.githubusercontent.com/tonyvince/alexa_rank_tracker/master/LICENSE)
 [![Build Status](https://travis-ci.org/tonyvince/alexa_rank_tracker.svg?branch=master&style=flat-square)](https://travis-ci.org/tonyvince/alexa_rank_tracker)
+[![Code Climate](https://codeclimate.com/github/tonyvince/alexa_rank_tracker/badges/gpa.svg?style=flat-square)](https://codeclimate.com/github/tonyvince/alexa_rank_tracker)
 [![Dependency Status](https://www.versioneye.com/user/projects/58a13a3e0f3d4f003ce97ed3/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/58a13a3e0f3d4f003ce97ed3)
 
 
