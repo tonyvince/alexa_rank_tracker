@@ -6,6 +6,7 @@
           <div>&nbsp</div>
           <%= render 'domains/form' %>
         <% else %>
+          <h4>Reached Max Domains/User(3)</h4>
           <%= link_to "See your Domains", user_domain_path(user_id: current_user.id, id: current_user.domains.first.id), class: "btn btn-primary" %>
         <% end %>
         <div class="result"></div>
