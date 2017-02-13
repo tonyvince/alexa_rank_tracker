@@ -1,9 +1,9 @@
 # Alexa Rank Tracker
 Ruby on Rails application that lets users keep track their website's [Alexa](http://www.alexa.com/siteinfo) Rank.
-<p align="center">
+
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](https://raw.githubusercontent.com/tonyvince/alexa_rank_tracker/master/LICENSE)
 [![Dependency Status](https://www.versioneye.com/user/projects/58a13a3e0f3d4f003ce97ed3/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/58a13a3e0f3d4f003ce97ed3)
-</p>
+
 
 Made with ❤️ by <a href="mailto:tonyvince7@gmail.com">Tony Vincent</a>.
 
