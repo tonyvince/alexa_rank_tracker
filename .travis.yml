@@ -6,7 +6,7 @@ before_script:
   - bundle exec rake db:create
   - bundle exec rake db:migrate
   - bundle exec rake db:seed
-  - bundle exec rails s
+  - bundle exec rails s -d
 
 script: 
   - RAILS_ENV=development bin/delayed_job start forstarting background jobs
