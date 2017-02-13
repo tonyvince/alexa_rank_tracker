@@ -1,0 +1,18 @@
+language: ruby
+rvm:
+  - 2.3.0
+before_script:
+  - bundle install
+  - bundle exec rake db:migrate
+  - bundle exec rake db:seed
+  - bundle exec rails s
+  - RAILS_ENV=development bin/delayed_job start forstarting background jobs
+  - bundle exec rake recurring:init
+
+script: 
+  - bundle exec rake secure_pipeline:network_attack
+  - bundle exec rake secure_pipeline:ssl_attack
+  - bundle exec rake secure_pipeline:xss
+  - bundle exec rake secure_pipeline:information_leakage
+  - bundle exec rake secure_pipeline:sql_injection
+  
