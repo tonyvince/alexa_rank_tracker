@@ -4,7 +4,7 @@ Ruby on Rails application that lets users keep track their website's [Alexa](htt
 [![Build Status](https://travis-ci.org/tonyvince/alexa_rank_tracker.svg?branch=master)](https://travis-ci.org/tonyvince/alexa_rank_tracker)
 [![Code Climate](https://codeclimate.com/github/tonyvince/alexa_rank_tracker/badges/gpa.svg)](https://codeclimate.com/github/tonyvince/alexa_rank_tracker)
 [![Dependency Status](https://www.versioneye.com/user/projects/58a13a3e0f3d4f003ce97ed3/badge.svg)](https://www.versioneye.com/user/projects/58a13a3e0f3d4f003ce97ed3)
-[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://raw.githubusercontent.com/tonyvince/alexa_rank_tracker/master/LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)(https://raw.githubusercontent.com/tonyvince/alexa_rank_tracker/master/LICENSE)
 
 Made with ❤️ by <a href="mailto:tonyvince7@gmail.com">Tony Vincent</a>.
 
