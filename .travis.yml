@@ -7,10 +7,10 @@ before_script:
   - bundle exec rake db:migrate
   - bundle exec rake db:seed
   - bundle exec rails s
-  - RAILS_ENV=development bin/delayed_job start forstarting background jobs
-  - bundle exec rake recurring:init
 
 script: 
+  - RAILS_ENV=development bin/delayed_job start forstarting background jobs
+  - bundle exec rake recurring:init
   - bundle exec rake secure_pipeline:network_attack
   - bundle exec rake secure_pipeline:ssl_attack
   - bundle exec rake secure_pipeline:xss
