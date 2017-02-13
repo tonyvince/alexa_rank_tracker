@@ -1,5 +1,6 @@
 # Alexa Rank Tracker
-![alt tag](https://raw.githubusercontent.com/tonyvince/alexa_rank_tracker/master/public/AlexaRank.png)
+![alt tag](https://raw.githubusercontent.com/tonyvince/alexa_rank_tracker/master/public/logo.png)
+
 Ruby on Rails application that lets users keep track their website's [Alexa](http://www.alexa.com/siteinfo) Rank.
 
 [![Build Status](https://travis-ci.org/tonyvince/alexa_rank_tracker.svg?branch=master)](https://travis-ci.org/tonyvince/alexa_rank_tracker)
