@@ -8,6 +8,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://raw.githubusercontent.com/tonyvince/alexa_rank_tracker/master/LICENSE)
 [![Gitter](https://img.shields.io/gitter/room/gitterHQ/gitter.svg)](https://gitter.im/AlexaRank/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Test Coverage](https://codeclimate.com/github/tonyvince/alexa_rank_tracker/badges/coverage.svg)](https://codeclimate.com/github/tonyvince/alexa_rank_tracker/coverage)
+
 Ruby on Rails application that allows users to keep track of their website's <a href="http://www.alexa.com/siteinfo">Alexa</a> Rank.
 
 
