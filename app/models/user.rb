@@ -1,5 +1,4 @@
 class User < ActiveRecord::Base
-  has_many :daily_ranks
   has_many :domains
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable

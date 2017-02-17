@@ -61,9 +61,9 @@ If graphs are not showing up run `$rake highcharts:update`
 ## Built With
 
 * [Devise](https://github.com/plataformatec/devise) - Authentication framework
-* [delayed_job](https://github.com/collectiveidea/delayed_job_active_record) - Background processing
+* [delayed_job](https://github.com/collectiveidea/delayed_job_active_record) - Background job processing
 * [active_Admin](https://github.com/activeadmin/activeadmin) - Administration framework
-* [lazy_high_charts](https://github.com/michelson/lazy_high_charts) - To use HighCharts from ruby code
+* [lazy_high_charts](https://github.com/michelson/lazy_high_charts) - To use HighCharts with ruby code
 
 ## Contributing
 
