@@ -8,7 +8,6 @@ module Recurring
     timezone 'UTC'
     def perform
       base_url = "http://alexa.com/siteinfo/"
-      #websites = DailyRank.select(:domain).distinct
       domains = Domain.includes(:ranks)
       domains.each do |domain|
         url = domain.try(:name)
