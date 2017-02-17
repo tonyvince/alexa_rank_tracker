@@ -11,7 +11,7 @@ module Recurring
       #websites = DailyRank.select(:domain).distinct
       domains = Domain.includes(:ranks)
       domains.each do |domain|
-        url = website.try(:domain)
+        url = domain.try(:name)
         if domain.ranks.last.date != Date.today
           doc = Nokogiri::HTML(open(base_url + url))
           new_rank = doc.at_css("strong.metrics-data.align-vmiddle").text.gsub(/\s+/,'')
