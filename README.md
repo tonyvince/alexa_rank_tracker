@@ -1,4 +1,4 @@
-# ![alexa_rank_tracker](public/logo.png)
+# ![alexa_rank_tracker](public/new_logo.png)
 [![Build Status](https://travis-ci.org/tonyvince/alexa_rank_tracker.svg?branch=master)](https://travis-ci.org/tonyvince/alexa_rank_tracker)
 [![Code Climate](https://codeclimate.com/github/tonyvince/alexa_rank_tracker/badges/gpa.svg)](https://codeclimate.com/github/tonyvince/alexa_rank_tracker)
 [![Dependency Status](https://www.versioneye.com/user/projects/58a13a3e0f3d4f003ce97ed3/badge.svg)](https://www.versioneye.com/user/projects/58a13a3e0f3d4f003ce97ed3)
