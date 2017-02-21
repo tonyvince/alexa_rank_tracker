@@ -11,11 +11,10 @@ module Recurring
       domains = Domain.includes(:ranks)
       domains.each do |domain|
         url = domain.try(:name)
-        if domain.ranks.last.date != Date.today
+        unless domain.ranks.last.date == Date.today
           doc = Nokogiri::HTML(open(base_url + url))
           new_rank = doc.at_css("strong.metrics-data.align-vmiddle").text.gsub(/\s+/,'')
-          @rank = Rank.new(rank: new_rank, date: Date.today, domain_id: domain.id)
-          @rank.save
+          @rank = Rank.create!(rank: new_rank, date: Date.today, domain_id: domain.id)
         end
       end
     end

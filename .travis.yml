@@ -11,4 +11,5 @@ before_script:
 script: 
   - RAILS_ENV=development bin/delayed_job start forstarting background jobs
   - bundle exec rake recurring:init
+  - bundle exec rspec spec
   
