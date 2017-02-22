@@ -8,6 +8,9 @@
 
 Ruby on Rails application that allows users to keep track of their website's <a href="http://www.alexa.com/siteinfo">Alexa</a> Rank.
 
+![App home](public/home.png?raw=true "Enter your domains")
+
+![Compare domains](public/graph.png?raw=true "Keep track of the ranks and comapre over a span of time")
 
 Made with ❤️ by <a href="mailto:tonyvince7@gmail.com">Tony Vincent</a>.
 
