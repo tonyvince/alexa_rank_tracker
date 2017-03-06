@@ -76,3 +76,7 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 ## License
 
 This project is licensed under the MIT License
+## Support on Beerpay
+Hey dude! Help me out for a couple of :beers:!
+
+[![Beerpay](https://beerpay.io/tonyvince/alexa_rank_tracker/badge.svg?style=beer-square)](https://beerpay.io/tonyvince/alexa_rank_tracker)  [![Beerpay](https://beerpay.io/tonyvince/alexa_rank_tracker/make-wish.svg?style=flat-square)](https://beerpay.io/tonyvince/alexa_rank_tracker?focus=wish)
