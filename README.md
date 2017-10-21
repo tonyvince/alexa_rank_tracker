@@ -40,7 +40,7 @@ $ bundle
 $ rake db:migrate
 $ rake db:seed
 $ rails s
-$ RAILS_ENV=development bin/delayed_job start forstarting background jobs
+$ RAILS_ENV=development bin/delayed_job start # for starting background jobs
 $ rake recurring:init
 
 
